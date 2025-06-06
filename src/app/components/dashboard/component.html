@@ -1,0 +1,48 @@
+<div class="dashboard-container">
+  <!-- Widget 01: Table View - Latest 5 Books -->
+  <div class="widget latest-books">
+    <h3>Latest 5 Books</h3>
+    <table mat-table [dataSource]="latestBooks" class="mat-elevation-z8">
+      <!-- Title Column -->
+      <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef>Title</th>
+        <td mat-cell *matCellDef="let book">{{ book.title }}</td>
+      </ng-container>
+
+      <!-- Author Column -->
+      <ng-container matColumnDef="author">
+        <th mat-header-cell *matHeaderCellDef>Author</th>
+        <td mat-cell *matCellDef="let book">{{ book.author }}</td>
+      </ng-container>
+
+      <!-- ISBN Column -->
+      <ng-container matColumnDef="isbn">
+        <th mat-header-cell *matHeaderCellDef>ISBN</th>
+        <td mat-cell *matCellDef="let book">{{ book.isbn }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['title', 'author', 'isbn']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['title', 'author', 'isbn']"></tr>
+    </table>
+  </div>
+
+  <!-- Widget 02: List View - Oldest 10 Books -->
+  <div class="widget oldest-books">
+    <h3>Oldest 10 Books</h3>
+    <ul>
+      <li *ngFor="let book of oldestBooks">
+        <strong>ID:</strong> {{ book.id }} |
+        <strong>Title:</strong> {{ book.title }} |
+        <strong>ISBN:</strong> {{ book.isbn }} |
+        <strong>Publish Date:</strong> {{ book.publishedDate | date:'yyyy-MM-dd' }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- Widget 03: Donut Chart - Books by Author -->
+<div class="widget chart-container">
+  <h3>Books by Author</h3>
+  <canvas #donutChart></canvas>
+</div>
+
+</div>

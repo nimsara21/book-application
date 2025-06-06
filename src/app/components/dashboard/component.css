@@ -1,0 +1,59 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #121212; /* Dark background for entire dashboard */
+}
+
+/* Widget containers */
+.widget {
+  background-color: #212121; /* Dark grey background */
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(255 255 255 / 0.1); /* Subtle light shadow */
+  padding: 1rem;
+  border: 1px solid #333; /* Dark border */
+  color: #e0e0e0; /* Light text */
+}
+
+.widget h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: #80deea; /* Light cyan heading */
+}
+
+/* Latest Books Table */
+.latest-books table {
+  width: 100%;
+  color: #e0e0e0; /* Light text in table */
+}
+
+.latest-books th,
+.latest-books td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #333; /* subtle row lines */
+}
+
+/* Oldest Books List */
+.oldest-books ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: #e0e0e0;
+}
+
+.oldest-books li {
+  margin-bottom: 10px;
+}
+
+.oldest-books strong {
+  color: #80deea;
+}
+
+/* Donut Chart */
+.chart-container canvas {
+  max-width: 100%;
+  height: auto;
+  background-color: transparent; /* Make sure chart background is transparent */
+}
+

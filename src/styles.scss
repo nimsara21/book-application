@@ -1,0 +1,16 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$primary: mat.define-palette(mat.$cyan-palette);
+$accent: mat.define-palette(mat.$teal-palette, A200, A100, A400);
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+@include mat.all-component-themes($dark-theme);
