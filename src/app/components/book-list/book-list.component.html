@@ -12,6 +12,13 @@
         <span class="spacer"></span>
         <button mat-raised-button color="accent" (click)="addBook()">Add New Book</button>
       </mat-toolbar>
+      
+      <button mat-raised-button color="primary" routerLink="/dashboard" class="dashboard-btn">
+        <mat-icon>dashboard</mat-icon>
+        &nbsp;Go to Dashboard
+      </button>
+
+
   
       <mat-table [dataSource]="books" class="mat-elevation-z8">
   

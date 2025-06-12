@@ -14,8 +14,8 @@ export interface Book {
 
 // Optional DTO for grouped books
 export interface BooksGroupedByAuthor {
-  Author: string;
-  BookCount: number;
+  author: string;
+  bookCount: number;
 }
 
 @Injectable({

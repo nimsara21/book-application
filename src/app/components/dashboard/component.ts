@@ -4,6 +4,9 @@ import { Book } from '../../models/book';
 import { Chart, registerables } from 'chart.js';
 import { MatTableModule } from '@angular/material/table'; 
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { RouterModule } from '@angular/router';
 
 // Register Chart.js components globally
 Chart.register(...registerables);
@@ -15,7 +18,10 @@ Chart.register(...registerables);
   standalone: true,
   imports: [
     MatTableModule,
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    RouterModule  
   ]
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
@@ -72,8 +78,9 @@ fetchBooksGroupedByAuthor(): void {
       return;
     }
 
-    const labels = this.booksByAuthor.map(item => item.Author);
-    const data = this.booksByAuthor.map(item => item.BookCount);
+    const labels = this.booksByAuthor.map(item => item.author);
+    const data = this.booksByAuthor.map(item => item.bookCount);
+
 
     // Destroy previous chart instance to avoid duplicates
     if (this.chart) {

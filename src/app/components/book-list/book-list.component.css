@@ -208,3 +208,16 @@ button[mat-raised-button]:hover {
     background-color: #313152 !important;
   }
   
+
+  .dashboard-btn {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+  transition: box-shadow 0.3s ease;
+}
+
+.dashboard-btn:hover {
+  box-shadow: 0 6px 12px rgba(0,0,0,0.24);
+}
+

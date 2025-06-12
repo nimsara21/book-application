@@ -57,3 +57,25 @@
   background-color: transparent; /* Make sure chart background is transparent */
 }
 
+.dashboard-toolbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+/* Optional: adjust button sizes and fonts */
+.dashboard-toolbar button {
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Mat-icon tweaks inside buttons */
+.dashboard-toolbar mat-icon {
+  font-size: 20px;
+}
