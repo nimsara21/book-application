@@ -1,27 +1,44 @@
-# BookApplication
+# Book Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+## Overview
 
-## Development server
+This is a full-stack web application for managing a collection of books. Users can create, read, update, and delete books through a modern, responsive UI.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The backend is built with **ASP.NET Core Web API**, and the frontend uses **Angular** with **Angular Material** and **Chart.js** for data visualization.
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Features
 
-## Build
+- View all books with detailed info (title, author, ISBN, published date, description)
+- Add, edit, and delete books
+- Display latest 5 books in a table view
+- Display oldest 10 books in a list view
+- Visualize books grouped by author using a donut chart
+- Responsive UI with smooth SPA experience (no page reloads)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+---
 
-## Running unit tests
+## Technologies Used
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Backend:** ASP.NET Core Web API, C#
+- **Frontend:** Angular, TypeScript, Angular Material, Chart.js
+- **Tools:** Visual Studio / VS Code, Postman (API testing)
+- **Version Control:** Git, GitHub
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Getting Started
 
-## Further help
+### Prerequisites
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [.NET 7 SDK](https://dotnet.microsoft.com/download)
+- [Node.js & npm](https://nodejs.org/)
+- Angular CLI (`npm install -g @angular/cli`)
+
+### Backend Setup
+
+```bash
+cd backend
+dotnet restore
+dotnet run
